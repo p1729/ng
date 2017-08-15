@@ -18,8 +18,7 @@ function LunchCheckController($scope) {
 			return item.trim().length > 0;
 		});
 		var noOfItems = pureItems.length;
-		console.log(items,pureItems);
-
+		
 		if(self.lunchMenu && noOfItems) {			
 			if(noOfItems <= 3 ) {
 				self.message = "Enjoy!";
