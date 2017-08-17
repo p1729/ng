@@ -11,22 +11,21 @@ function LunchCheckController($scope) {
 	
 	$scope.menuCheck = function() {
 		
-		var self = this;
-		var items = self.lunchMenu.split(",");
+		var items = $scope.lunchMenu.split(",");
 		var pureItems = items.filter(function(item) {
 			console.log(item.trim().length);
 			return item.trim().length > 0;
 		});
 		var noOfItems = pureItems.length;
 		
-		if(self.lunchMenu && noOfItems) {			
+		if($scope.lunchMenu && noOfItems) {			
 			if(noOfItems <= 3 ) {
-				self.message = "Enjoy!";
+				$scope.message = "Enjoy!";
 			} else {
-				self.message = "Too much!";
+				$scope.message = "Too much!";
 			}		
 		} else {
-			self.message = "Please enter data first";
+			$scope.message = "Please enter data first";
 		}
 	};
 };
